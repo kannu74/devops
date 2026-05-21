@@ -27,3 +27,17 @@ kubectl get pods
 kubectl delete deployment flask-deploy
 kubectl delete service flask-deploy
 minikube stop
+
+
+single container
+docker build -t flask-app .
+docker images
+docker run -p 5000:5000 flask-app
+
+multicontainer
+docker-compose build
+docker-compose up
+
+or 
+
+docker-compose up --build
